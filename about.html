@@ -1,0 +1,398 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+	<link rel="icon" sizes="16x16" href="image/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+					body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none; 
+            color: #fefbfb; 
+            font-size: 1rem;
+        }
+
+        a:hover {
+            color: pink;
+        }
+        
+         .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .about-section {
+            margin-bottom: 50px;
+        }
+
+        .about-images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+			
+        }
+
+        .about-images video {
+            width: calc(25% - 15px);
+            border-radius: 20px;
+            object-fit: cover;
+        }
+				
+		
+		img {
+  border-radius: 30%;
+		}
+		
+		
+		
+    </style>
+</head>
+
+<body>
+			<!---menu--->
+					<table bgcolor="#3a3434" border="0" width="900" style="border-collapse: collapse; margin: 0 auto;">
+						<tr>
+							<td colspan="6">
+								<table border="0" style="border-collapse: collapse; margin: 0 auto;">
+									<tr>
+										<td colspan="6"><p>&nbsp;</p></td>
+									</tr>
+									<tr>
+										<!-- Logo -->
+										<td width="200" height="40" align="center">
+											<a href="index.html">
+												<img src="image/logo.png" alt="Logo" style="width: 100px; height: auto;">
+											</a>
+										</td>
+
+										<!-- Navigation Links -->
+										<td width="100" align="center"><a href="index.html" style="text-decoration: none;">Home</a></td>
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="about.html" style="text-decoration: none;">About Us</a>
+												<div class="dropdown-content">
+													<a href="about.html#about-section">Production</a>
+													<a href="about.html#our-stories">Our Stories</a>
+													<a href="about.html#team">Our Team</a>
+												</div>
+											</div>
+										</td>
+
+										<!-- Shop Dropdown -->
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="shop.html" style="text-decoration: none;">Shop</a>
+												<div class="dropdown-content">
+													<a href="shop.html#clothes">Clothes</a>
+													<a href="shop.html#accessory">Accessory</a>
+												</div>
+											</div>
+										</td>
+										
+										<td width="100" align="center"><a href="sales.html" style="text-decoration: none;">Sales</a></td>
+										<td width="100" align="center"><a href="contact.html" style="text-decoration: none;">Contact</a></td>
+										
+										<!-- Space -->
+										<td width="100" colspan="6"><p>&nbsp;</p></td>
+										
+									
+										<!-- Login Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/login.png" alt="Login Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openLoginModal()">
+										</td>
+
+										<!-- Shopping Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/shopping.png" alt="Shopping Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openCartModal()">
+										</td>
+										<td width="10" height="50" align="center">
+										<tr>
+											<td colspan="6"><p>&nbsp;</p></td>
+										</tr>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p>&nbsp;</p></td> <!--non-breaking space-->
+				</tr>
+			</table>
+			<!-- Separator End -->
+
+			<!-- Best Seller Section -->
+		<table bgcolor="#e8e8e8" border="0" align="center" width="900" style="border-collapse: collapse; margin: 20px auto;">
+				<!-- Header Section -->
+				<tr align="center" width="900">
+				  <td colspan="3" style="padding: 0; margin: 0;">
+					<section class="about-section">
+						<h2 style="font-size: 3em; font-weight: bold; letter-spacing: 1px; margin-bottom: 20px; text-align: center;">
+							Production
+						</h2>
+						
+						<div class="about-images">
+							<video src="video-about/about1.mp4" autoplay muted loop style="width: 20%;"></video>
+							<video src="video-about/about3.mp4" autoplay muted loop style="width: 20%;"></video>
+							<video src="video-about/about2.mp4" autoplay muted loop style="width: 20%;"></video>
+							<video src="video-about/about4.mp4" autoplay muted loop style="width: 20%;"></video>
+						</div>
+					</section>
+				</tr>
+					 
+	
+			 <!-- Our Stories Section -->
+				<tr align="center" width="900"> 
+				  <td colspan="3" style="text-align: center; padding: 40px; background: #f3f3e2;">
+					<section id="our-stories">
+					<h2 style="font-size: 3em; font-weight: bold; letter-spacing: 1px; margin-bottom: 20px;">
+						Our Stories
+					</h2>
+					<p style="font-size: 1.3em; color: #666; margin-bottom: 30px; font-style: italic;">
+					  From humble beginnings to bold strides, discover the journey of Streets and our passion for redefining streetwear.
+					</p>
+					</section>
+				  </td>
+				</tr>
+				<tr align="center" width="900">
+				  <td colspan="3" style="padding: 40px; background-color: #f3f3e2;">
+					<table width="100%" style="border-spacing: 0; border-collapse: collapse;">
+					  <!-- Our Milestones Section -->
+					<tr>
+					  <td colspan="2" style="padding-bottom: 40px; text-align: left;">
+						<p style="font-size: 1.5em; font-weight: bold; color: #333; margin-bottom: 20px;">Our Milestones</p>
+						<ul style="padding: 0; list-style-type: disc; margin-left: 20px;">
+						  <li class="milestone-item" style="position: relative; padding: 20px 40px; margin-bottom: 15px; background: #f7f7f7; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+							<span style="font-size: 1.3em; font-weight: bold; color: #444;">Launched in 2020</span>
+							<p class="milestone-description" style="margin-top: 10px; display: none; color: #555;">
+							  We began our journey with a mission to revolutionize fashion through creativity and authenticity.
+							</p>
+						  </li>
+						  <li class="milestone-item" style="position: relative; padding: 20px 40px; margin-bottom: 15px; background: #f7f7f7; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+							<span style="font-size: 1.3em; font-weight: bold; color: #444;">"Streets" Collection</span>
+							<p class="milestone-description" style="margin-top: 10px; display: none; color: #555;">
+							  Our first collection celebrated both the comfort and style of the streets, making waves in the fashion world.
+							</p>
+						  </li>
+						  <li class="milestone-item" style="position: relative; padding: 20px 40px; margin-bottom: 15px; background: #f7f7f7; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+							<span style="font-size: 1.3em; font-weight: bold; color: #444;">Collaborations in 2023</span>
+							<p class="milestone-description" style="margin-top: 10px; display: none; color: #555;">
+							  A collaboration with Essentials to create limited-edition designs that capture the essence of street style.
+							</p>
+						  </li>
+						</ul>
+					  </td>
+					</tr>
+
+					  <!-- Our Values Section -->
+					  <tr>
+						<!-- Text Content -->
+						<td style="padding-right: 20px; vertical-align: top; width: 70%;">
+						  <p style="font-size: 1.5em; font-weight: bold; color: #333; margin-bottom: 20px;">Our Values</p>
+						  <ol style="padding-left: 20px; list-style-position: inside;">
+							<li class="value-item" style="margin-bottom: 15px; line-height: 1.8; font-size: 1.2em; color: #555; cursor: pointer;">
+							  <strong>Authenticity:</strong> Every piece we design reflects the raw energy of street culture.
+							</li>
+							<li class="value-item" style="margin-bottom: 15px; line-height: 1.8; font-size: 1.2em; color: #555; cursor: pointer;">
+							  <strong>Innovation:</strong> We continuously push boundaries to redefine streetwear aesthetics.
+							</li>
+							<li class="value-item" style="margin-bottom: 15px; line-height: 1.8; font-size: 1.2em; color: #555; cursor: pointer;">
+							  <strong>Community:</strong> Everyone who loves fashion, from young to old, building a tribe of individuals who wear their passion and break boundaries.
+							</li>
+						  </ol>
+						</td>
+						<!-- Image Section -->
+						<td style="vertical-align: top; width: 30%; text-align: right;">
+						  <img src="image/1.png" alt="Our Values Image" style="width: 300px; border-radius: 8px;">
+						</td>
+					  </tr>
+					</table>
+				  </td>
+				</tr>
+			
+			<!--video how we make?-->
+			<tr align="center" width="900">
+				<td colspan="3" style="padding: 0; margin: 0;">
+					<div style="position: relative; overflow: hidden; width: 100%; height: 400px;">
+					  <video src="video-about/video1.mp4" autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;"></video>
+					 </div>
+				</td>
+			</tr>
+
+
+
+
+           <!-- Meet Our Team Section -->
+			<tr>
+				<td colspan="6" align="center" width="900" height="30" style="padding: 20px; text-align: center;">
+					<section id="team">
+						<h2 style="font-size: 3em; color: #5d5d5d; font-weight: bold; letter-spacing: 1px;">
+						  Meet Our Team
+						</h2>
+				</td>
+			</tr>
+			<tr>
+			  <td colspan="6" align="center" width="900" height="350" style="padding: 20px; text-align: center;">
+				<table border="0" align="center" style="width: 100%; max-width: 900px; text-align: center; border-collapse: collapse;">
+				  <tr>
+					<!-- Team 1 -->
+					<td style="padding: 20px; position: relative; cursor: pointer;" onclick="showDetails('Sales Department', 'Huda Dina')">
+					  <img src="image/team1.png" alt="Feedback Image" style="width: 150px; position: relative; z-index: 2;">
+					  <p style="margin-top: 10px; font-size: 0.9em; color: #787171;"><b>Sales Department</b></p>
+					  <p>Huda Dina</p>
+					</td>
+					<!-- Team 2 -->
+					<td style="padding: 20px; position: relative; cursor: pointer;" onclick="showDetails('Marketing Department', 'Amira Raihana')">
+					  <img src="image/team3.jpg" alt="Feedback Image" style="width: 150px; position: relative; z-index: 2;">
+					  <p style="margin-top: 10px; font-size: 0.9em; color: #787171;"><b>Marketing Department</b></p>
+					  <p>Amira Raihana</p>
+					</td>
+					<!-- Team 3 -->
+					<td style="padding: 20px; position: relative; cursor: pointer;" onclick="showDetails('Operations Department', 'Nur Aisha')">
+					  <img src="image/team2.jpg" alt="Feedback Image" style="width: 150px; position: relative; z-index: 2;">
+					  <p style="margin-top: 10px; font-size: 0.9em; color: #787171;"><b>Operations Department</b></p>
+					  <p>Nur Aisha</p>
+					</td>
+					<!-- Team 4 -->
+					<td style="padding: 20px; position: relative; cursor: pointer;" onclick="showDetails('Finance Department', 'Harith Syahmi')">
+					  <img src="image/team4.jpg" alt="Feedback Image" style="width: 150px; position: relative; z-index: 2;">
+					  <p style="margin-top: 10px; font-size: 0.9em; color: #787171;"><b>Finance Department</b></p>
+					  <p>Harith Syahmi</p>
+					</td>
+				  </tr>
+				</table>
+			  </td>
+			</tr>
+
+			<!-- Modal -->
+			<div id="detailsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 10;">
+			  <div style="background: white; padding: 20px; border-radius: 5px; text-align: center; width: 300px;">
+				<h3 id="modalDepartment"></h3>
+				<p id="modalName"></p>
+				<button onclick="closeModal()" style="margin-top: 10px; padding: 10px 20px; border: none; background-color: #787171; color: white; cursor: pointer;">Close</button>
+			  </div>
+			</div>
+
+							
+					<!---Footer----->	
+					<tr align="center">
+						<td colspan="6">
+							<table bgcolor="#3a3434" border="0" width="900">
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+								<tr align="center">
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Useful Links</b><br />
+										<a href="index.html">Home</a><br />
+										<a href="about.html">About us</a><br />
+										<a href="shop.html">Our Product</a><br />
+										<a href="sales.html">Sales</a><br />
+										<a href="contact.html">Contact Us</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Service</b><br />
+										<a href="#">Order Guide</a><br />
+										<a href="#">Right of Withdrawal</a><br />
+										<a href="#">Shipping & Payment</a><br />
+										<a href="#">Return Policy</a><br />
+										<a href="#">Term & Conditions</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Contact Us</b><br />
+										<span style="color: #ffffff;">019-836-7334<br />
+										<span style="color: #ffffff;">B-02, 03, Persiaran Multimedia,<br />
+										<span style="color: #ffffff;">Cyber 10,<br />
+										<span style="color: #ffffff;">63000 Cyberjaya,<br />
+										Selangor
+									</td>
+								</tr>
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+		</table>
+		
+		<!-- Separator -->
+		<table>
+			<tr>
+				<td><p>&nbsp;</p></td> <!--non-breaking space-->
+			</tr>
+		</table>
+		<!-- Separator End -->
+		
+	<script>
+	  // Toggle descriptions for milestones
+	  document.querySelectorAll('.milestone-item').forEach(item => {
+		item.addEventListener('click', () => {
+		  const description = item.querySelector('.milestone-description');
+		  if (description.style.display === 'none' || description.style.display === '') {
+			description.style.display = 'block';
+			item.style.backgroundColor = '#cbc6cf';
+		  } else {
+			description.style.display = 'none';
+			item.style.backgroundColor = '#f7f7f7';
+		  }
+		});
+	  });
+
+	  // Add hover effects for values
+	  document.querySelectorAll('.value-item').forEach(item => {
+		item.addEventListener('mouseover', () => {
+		  item.style.color = '#ebc0c0'; // Blue on hover
+		});
+		item.addEventListener('mouseout', () => {
+		  item.style.color = '#555'; // Reset color
+		});
+	  });
+	</script>
+	<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+	</script>
+	
+	</body>
+</html>

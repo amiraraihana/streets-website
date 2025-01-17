@@ -1,0 +1,639 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streets</title>
+	<link rel="icon" sizes="16x16" href="image/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+					a {
+						text-decoration: none; 
+						color: #fefbfb; 
+						font-size: 1rem;
+					}
+
+					a:hover {
+						text-decoration: none; 
+						color: pink;
+					}
+    </style>
+</head>
+<body>
+		<!-- Background Music -->
+		<audio autoplay loop>
+			<source src="audio/audio.mp3" type="audio/mp3">
+		</audio>
+		<!-- Popup -->
+		<!-- Include Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+		<div class="popup" id="popup">
+			<div class="popup-content" style="font-family: 'Poppins', sans-serif; text-align: center;">
+				<p style="font-size: 1.8em; color: #FFC0CB; font-family: 'Lobster', cursive; margin-bottom: 10px;">
+					Welcome to <span style="font-weight: bold; color: #FFC0CB;">Streets</span>!
+				</p>
+				<p style="font-size: 1em; font-family: 'Montserrat', sans-serif; color: #ffffff; margin: 0;">
+					<em>"Own the Streets. Define Your Style."</em>
+				</p>
+			</div>
+			<p align="center" style="padding: 10px">
+				<button class="popup-button" onclick="closePopup()">Close</button>
+			</p>
+		</div>
+
+		<!-- Social Media Icon Bar -->
+		<div class="social-bar">
+			<a href="https://www.instagram.com/streets.official.com_/" target="_blank">
+				<img src="image/instagram.png" alt="Instagram">
+				<span>Instagram</span>
+			</a>
+			<a href="https://www.tiktok.com/@streets.official.com" target="_blank">
+				<img src="image/tiktok.png" alt="TikTok">
+				<span>TikTok</span>
+			</a>
+			<a href="https://wa.me/60198367334" target="_blank">
+				<img src="image/whatsapp.png" alt="Whatsapp">
+				<span>WhatsApp</span>
+			</a>
+		</div>
+
+		<!---menu--->
+					<table bgcolor="#3a3434" border="0" width="900" style="border-collapse: collapse; margin: 0 auto;">
+						<tr>
+							<td colspan="6">
+								<table border="0" style="border-collapse: collapse; margin: 0 auto;">
+									<tr>
+										<td colspan="6"><p>&nbsp;</p></td>
+									</tr>
+									<tr>
+										<!-- Logo -->
+										<td width="200" height="40" align="center">
+											<a href="index.html">
+												<img src="image/logo.png" alt="Logo" style="width: 100px; height: auto;">
+											</a>
+										</td>
+
+										<!-- Navigation Links -->
+										<td width="100" align="center"><a href="index.html" style="text-decoration: none;">Home</a></td>
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="about.html" style="text-decoration: none;">About Us</a>
+												<div class="dropdown-content">
+													<a href="about.html#about-section">Production</a>
+													<a href="about.html#our-stories">Our Stories</a>
+													<a href="about.html#team">Our Team</a>
+												</div>
+											</div>
+										</td>
+
+										<!-- Shop Dropdown -->
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="shop.html" style="text-decoration: none;">Shop</a>
+												<div class="dropdown-content">
+													<a href="shop.html#clothes">Clothes</a>
+													<a href="shop.html#accessory">Accessory</a>
+												</div>
+											</div>
+										</td>
+										
+										<td width="100" align="center"><a href="sales.html" style="text-decoration: none;">Sales</a></td>
+										<td width="100" align="center"><a href="contact.html" style="text-decoration: none;">Contact</a></td>
+										
+										<!-- Space -->
+										<td width="100" colspan="6"><p>&nbsp;</p></td>
+										
+									
+										<!-- Login Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/login.png" alt="Login Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openLoginModal()">
+										</td>
+
+										<!-- Shopping Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/shopping.png" alt="Shopping Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openCartModal()">
+										</td>
+										<td width="10" height="50" align="center">
+										<tr>
+											<td colspan="6"><p>&nbsp;</p></td>
+										</tr>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					
+			<!-- Cart Modal -->
+			<div id="cartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; overflow: auto;">
+				<div style="margin: 10% auto; width: 30%; background: #808070; padding: 10px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+					<div style="display: flex; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+						<h2 style="font-size: 1.5rem; color: #fff; margin: 0;">Shopping Cart</h2>
+						<button onclick="closeCartModal()" style="background: transparent; border: none; font-size: 1.5rem; color: #555; cursor: pointer;">&times;</button>
+					</div>
+					<div id="cart-items" style="max-height: 300px; overflow-y: auto; margin: 20px 0;"></div>
+					<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+						<strong style="font-size: 1.2rem; color: #fff;">Total:</strong>
+						<span id="cart-total" style="font-size: 1.2rem; color: #fff;">0.00 RM</span>
+					</div>
+					<div style="margin-top: 20px; text-align: right;">
+						<button style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Checkout</button>
+					</div>
+				</div>
+			</div>
+
+			
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p>&nbsp;</p></td> <!--non-breaking space-->
+				</tr>
+			</table>
+			<!-- Separator End -->
+			
+		<table style="background-color: #dddadd; border: 1px solid #000; width: 900px; height: 400px; border-collapse: collapse; margin: 0 auto; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden; font-family: 'Cabin Condensed';">
+				<tr>
+				  <td style="text-align: center; padding: 20px;">
+					<svg viewBox="0 0 100 20" style="font-weight: bold; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+					  <defs>
+						<linearGradient id="gradient">
+						  <stop offset="0%" stop-color="#000" />
+						</linearGradient>
+						<pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+						  <path 
+							d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" 
+							fill="url(#gradient)">
+							<animateTransform
+							  attributeName="transform"
+							  begin="0s"
+							  dur="1.5s"
+							  type="translate"
+							  from="0,0"
+							  to="40,0"
+							  repeatCount="indefinite" />
+						  </path>
+						</pattern>
+					  </defs>
+					  <text 
+						text-anchor="middle" 
+						x="50" 
+						y="15" 
+						font-size="20" 
+						fill="white" 
+						fill-opacity="0.1">STREETS</text>
+					  <text 
+						text-anchor="middle" 
+						x="50" 
+						y="15" 
+						font-size="20" 
+						fill="url(#wave)" 
+						fill-opacity="1">STREETS</text>
+					</svg>
+				  </td>
+				</tr>
+			  </table>
+			  
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+
+		<main>
+			
+			<table border="0" align="center" width="900" style="border-collapse: collapse; margin: 20px auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+						<!-- Row for Navigation Links -->
+						<tr height="50" style="background-color: #3a3434;">
+							<td colspan="2" align="center" width="150"></td>
+							<td align="center" width="200">
+								<a href="#best-seller">Best Seller</a>
+							</td>
+							<td align="center" width="200">
+								<a href="#collab">Collab</a>
+							</td>
+							<td align="center" width="200">
+								<a href="#feedback">Feedback</a>
+							</td>
+							<td align="center" width="150"></td>
+						</tr>
+			</table>
+			
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.2px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+
+
+			<!-- Best Seller Section -->
+		<table bgcolor="#e8e8e8" border="0" align="center" width="900" style="border-collapse: collapse; margin: 20px auto;">
+				<!-- Header Section -->
+				<tr>
+					<td colspan="3" align="center" height="50" style="padding: 10px; text-align: center;">
+						<section id="best-seller">
+							<h2 style="font-size: 3em; color: #5d5d5d; font-weight: bold; letter-spacing: 1px; margin-bottom: 20px;">
+						  Best Seller
+						</h2>
+						</section>
+					</td>
+				</tr>
+
+				<!-- Product Rows -->
+				<tr>
+					<td style="padding: 20px; text-align: center;">
+						<div class="product-card">
+							<img src="image/product9.jpg" alt="Asphalt Kings" width="150">
+							<div class="product-info">
+								<h3>Asphalt Kings</h3>
+								<p>Color: Black | Size: S M L XL| Material: 100% Cotton</p>
+								<p class="price">100.00 RM <span class="old-price">129.00 RM</span></p>
+							</div>
+							<div class="product-actions">
+								<button class="add-to-cart" data-name="Asphalt Kings" data-price="129.00">Add to Cart</button>
+							</div>
+						</div>
+					</td>
+					<td style="padding: 20px; text-align: center;">
+						<div class="product-card">
+							<img src="image/product5.jpg" alt="Damage" width="150">
+							<div class="product-info">
+								<h3>Damage</h3>
+								<p>Color: White | Size: S M L XL| Material: 100% Cotton</p>
+								<p class="price">120.00 RM <span class="old-price">150.00 RM</span></p>
+							</div>
+							<div class="product-actions">
+								<button class="add-to-cart" data-name="Damage" data-price="120.00">Add to Cart</button>
+							</div>
+						</div>
+					</td>
+					<td style="padding: 20px; text-align: center;">
+						<div class="product-card">
+							<img src="image/product12.jpg" alt="Alley Hustle" width="150">
+							<div class="product-info">
+								<h3>Alley Hustle</h3>
+								<p>Color: White | Size: S M L XL| Material: 100% Cotton</p>
+								<p class="price">80.00 RM <span class="old-price">100.00 RM</span></p>
+							</div>
+							<div class="product-actions">
+								<button class="add-to-cart" data-name="Alley Hustle" data-price="80.00">Add to Cart</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 20px; text-align: center;">
+						<div class="product-card">
+							<img src="image/product15.jpg" alt="Base Layers" width="150">
+							<div class="product-info">
+								<h3>Base Layers</h3>
+								<p>Color: Black | Size: S M L XL| Material: 100% Cotton</p>
+								<p class="price">150.00 RM <span class="old-price">200.00 RM</span></p>
+							</div>
+							<div class="product-actions">
+								<button class="add-to-cart" data-name="Base Layers" data-price="809.00">Add to Cart</button>
+							</div>
+						</div>
+					</td>
+					<td style="padding: 20px; text-align: center;">
+						<div class="product-card">
+							<img src="image/product18.jpg" alt="Neon Lane" width="150">
+							<div class="product-info">
+								<h3>Neon Lane</h3>
+								<p>Color: Black | Size: S M L | Material: Jersey</p>
+								<p class="price">70.00 RM <span class="old-price">100.00 RM</span></p>
+							</div>
+							<div class="product-actions">
+								<button class="add-to-cart" data-name="Neon Lane" data-price="70.00">Add to Cart</button>
+							</div>
+						</div>
+					</td>
+					<td style="padding: 20px; text-align: center;">
+					<div class="product-card">
+						<img src="image/product1.jpg" alt="Core Street" width="150">
+						<div class="product-info">
+							<h3>Core Street</h3>
+							<p>Color: Black | Size: S M L XL| Material: 100% Cotton</p>
+							<p class="price">80.00 RM <span class="old-price">120.00 RM</span></p>
+						</div>
+						<div class="product-actions">
+							<button class="add-to-cart" data-name="Core Street" data-price="80.00">Add to Cart</button>
+						</div>
+					</div>
+					</td>
+				</tr>
+			
+
+				<!-- Show More Button -->
+				<tr>
+					<td colspan="3" align="center" style="padding: 20px;">
+						<a href="shop.html" style="text-decoration: none;">
+							<button style="width: auto; padding: 10px 20px; background-color: #9286a6; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+								Show More
+							</button>
+						</a>
+					</td>
+				</tr>
+			</table>
+			
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+			
+			<table bgcolor="#d9d9d9" border="0" width="900" style="border-collapse: collapse; margin: 20px auto;">
+			<tr>
+				<td>
+						<div class="slideshow-container">
+							<div class="mySlides fade">
+							  <img src="image/slide2.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides fade">
+							  <img src="image/slide1.jpg" style="width:100%">
+							</div>
+
+							<div class="mySlides fade">
+							  <img src="image/slide3.jpg" style="width:100%">
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+
+						</div>
+					<br>
+				</td>
+			</tr>
+		</table>
+		
+		<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+				
+
+			<!-- Collab Section -->
+		<table bgcolor="#d9d9d9" border="0" width="900" style="border-collapse: collapse; margin: 20px auto;">
+			  <tr bgcolor="#f9f9f9" align="center" width="900" >
+				<td colspan="3" style="text-align: center; padding: 20px;">
+					<section id="collab">
+					  <h2 style="font-size: 2.8em; font-weight: bold; color: #4b4b4b; margin-bottom: 20px;">
+						Streets + <span style="color: #6c63ff;">Essentials</span>
+					  </h2>
+					  <p style="font-size: 1.1em; color: #7a7a7a; margin-bottom: 30px;">
+						Experience a fusion of creativity and innovation in our latest collaboration.
+					  </p>
+					</section>
+				</td>
+			  </tr>
+
+			  <!-- Video Section -->
+			  <tr bgcolor="#f9f9f9" align="center" width="900">
+				<td colspan="3" style="text-align: center; padding: 20px; position: relative;">
+				  <video
+					controls
+					autoplay
+					muted
+					loop
+					style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+					<source src="video/video2.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				  </video>
+				  <!-- Video Overlay -->
+				  <div style="position: absolute; bottom: 10%; left: 10%; background-color: rgba(255, 255, 255, 0.8); padding: 8px 20px; border-radius: 5px; font-size: 0.9em; color: #4b4b4b; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+					A glimpse of innovation
+				  </div>
+				</td>
+			  </tr>
+
+			  <!-- Decorative Line -->
+			  <tr bgcolor="#f9f9f9" align="center" width="900" height="10">
+				  <td colspan="3" style="text-align: center;">
+					<div style="margin: 15px 0; height: 1px; background-color: #6c63ff; width: 30px; margin-left: auto; margin-right: auto;"></div>
+				  </td>
+			</tr>
+
+
+			  <!-- Footer Section -->
+			  <tr bgcolor="#f9f9f9" align="center" width="900"  height="10">
+				<td colspan="3" style="text-align: center; padding: 10px;">
+				  <p style="font-size: 1em; color: #7a7a7a; margin-top: 15px;">
+					<i>Crafted with passion, designed for excellence.</i>
+				  </p>
+				</td>
+			  </tr>
+
+           <!-- feedback Section -->
+			<tr>
+				<td colspan="6" align="center" style="padding: 5px; text-align: center;">
+					<section id="feedback">
+						<h2 style="font-size: 3em; color: #5d5d5d; font-weight: bold; letter-spacing: 1px; margin-top: 20px;">
+						  Feedback
+						</h2>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" align="center" width="900" height="150" style="padding: 20px; text-align: center;">
+						<table border="0" align="center" style="width: 100%; max-width: 900px; text-align: center; border-collapse: collapse;">
+							<tr>
+								<!-- Feedback 1 -->
+								<td style="padding: 20px; position: relative;">
+									<img class="shape" src="image/shape.png" alt="Background Shape"
+										style="width: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+									<img src="image/feedback1.png" alt="Feedback Image" style="width: 250px; position: relative; z-index: 2;">
+									<p style="margin-top: 10px; font-size: 0.9em; color: #b3b3b3;">⭐⭐⭐⭐⭐</p>
+									<p>"Amazing collaboration! Love the unique designs!"</p>
+								</td>
+								<!-- Feedback 2 -->
+								<td style="padding: 20px; position: relative;">
+									<img class="shape" src="image/shape.png" alt="Background Shape"
+										style="width: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+									<img src="image/feedback2.png" alt="Feedback Image" style="width: 250px; position: relative; z-index: 2;">
+									<p style="margin-top: 10px; font-size: 0.9em; color: #b3b3b3;">⭐⭐⭐⭐⭐</p>
+									<p>"The designs perfectly blend urban and minimal styles."</p></p>
+								</td>
+								<!-- Feedback 3 -->
+								<td style="padding: 20px; position: relative;">
+									<img class="shape" src="image/shape.png" alt="Background Shape"
+										style="width: 200px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+									<img src="image/feedback3.png" alt="Feedback Image" style="width: 240px; position: relative; z-index: 2;">
+									<p style="margin-top: 10px; font-size: 0.9em; color: #b3b3b3;">⭐⭐⭐⭐⭐</p>
+									<p>"A perfect fusion of bold and timeless aesthetics."</p>
+								</td>
+							</tr>
+						</table>
+							
+							<!-- Contact Section -->
+							<tr>
+								<td colspan="6" align="center">
+								<p>&nbsp;</p>
+								</td>
+							</tr>
+					<!---Footer----->	
+					<tr align="center">
+						<td colspan="6">
+							<table bgcolor="#3a3434" border="0" width="900">
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+								<tr align="center">
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Useful Links</b><br />
+										<a href="index.html">Home</a><br />
+										<a href="about.html">About us</a><br />
+										<a href="shop.html">Our Product</a><br />
+										<a href="sales.html">Sales</a><br />
+										<a href="contact.html">Contact Us</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Service</b><br />
+										<a href="#">Order Guide</a><br />
+										<a href="#">Right of Withdrawal</a><br />
+										<a href="#">Shipping & Payment</a><br />
+										<a href="#">Return Policy</a><br />
+										<a href="#">Term & Conditions</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Contact Us</b><br />
+										<span style="color: #ffffff;">019-836-7334<br />
+										<span style="color: #ffffff;">B-02, 03, Persiaran Multimedia,<br />
+										<span style="color: #ffffff;">Cyber 10,<br />
+										<span style="color: #ffffff;">63000 Cyberjaya,<br />
+										Selangor
+									</td>
+								</tr>
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+		</table>
+		
+		<!-- Separator -->
+		<table>
+			<tr>
+				<td><p>&nbsp;</p></td> <!--non-breaking space-->
+			</tr>
+		</table>
+		<!-- Separator End -->
+		
+	<script>
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                console.log('Autoplay blocked:', error);
+            });
+        });
+    </script>
+	<script>
+		// Popup functionality
+		function closePopup() {
+			document.getElementById("popup").style.display = "none";
+		}
+
+		window.onload = function() {
+			setTimeout(function() {
+				document.getElementById("popup").style.display = "block";
+			}, 10); // Adjust the timing if necessary
+		};
+	</script>
+	<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+	</script>
+	<script>
+    const cart = [];
+
+    // Function to open cart modal
+    function openCartModal() {
+        document.getElementById('cartModal').style.display = 'block';
+        updateCart(); // Update cart display when modal is opened
+    }
+
+    // Function to close cart modal
+    function closeCartModal() {
+        document.getElementById('cartModal').style.display = 'none';
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        cartItems.innerHTML = '';
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            const itemDiv = document.createElement('div');
+            const itemName = document.createElement('span');
+            itemName.textContent = `${item.name} - ${item.price} RM`;
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.className = 'remove-item-btn';
+            removeButton.onclick = () => {
+                cart.splice(index, 1);
+                updateCart();
+            };
+            itemDiv.appendChild(itemName);
+            itemDiv.appendChild(removeButton);
+            cartItems.appendChild(itemDiv);
+            total += parseFloat(item.price);
+        });
+
+        cartTotal.textContent = total.toFixed(2) + ' RM';
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p style="text-align: center; color: #888;">Your cart is empty!</p>';
+        }
+    }
+
+    // Add event listeners to "Add to Cart" buttons
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = button.getAttribute('data-price');
+            cart.push({ name, price });
+            alert(`${name} has been added to your cart!`);
+        });
+    });
+</script>
+	</body>
+</html>

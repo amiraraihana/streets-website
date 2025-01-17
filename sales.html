@@ -1,0 +1,405 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales</title>
+	<link rel="icon" sizes="16x16" href="image/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+					a {
+						text-decoration: none; 
+						color: #fefbfb; 
+						font-size: 1rem;
+					}
+
+					a:hover {
+						text-decoration: none; 
+						color: pink;
+					}
+    </style>
+</head>
+
+<body>
+		
+			<!---menu--->
+					<table bgcolor="#3a3434" border="0" width="900" style="border-collapse: collapse; margin: 0 auto;">
+						<tr>
+							<td colspan="6">
+								<table border="0" style="border-collapse: collapse; margin: 0 auto;">
+									<tr>
+										<td colspan="6"><p>&nbsp;</p></td>
+									</tr>
+									<tr>
+										<!-- Logo -->
+										<td width="200" height="40" align="center">
+											<a href="index.html">
+												<img src="image/logo.png" alt="Logo" style="width: 100px; height: auto;">
+											</a>
+										</td>
+
+										<!-- Navigation Links -->
+										<td width="100" align="center"><a href="index.html" style="text-decoration: none;">Home</a></td>
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="about.html" style="text-decoration: none;">About Us</a>
+												<div class="dropdown-content">
+													<a href="about.html#about-section">Production</a>
+													<a href="about.html#our-stories">Our Stories</a>
+													<a href="about.html#team">Our Team</a>
+												</div>
+											</div>
+										</td>
+
+										<!-- Shop Dropdown -->
+										<td width="100" align="center" style="position: relative;">
+											<div class="dropdown">
+												<a href="shop.html" style="text-decoration: none;">Shop</a>
+												<div class="dropdown-content">
+													<a href="shop.html#clothes">Clothes</a>
+													<a href="shop.html#accessory">Accessory</a>
+												</div>
+											</div>
+										</td>
+										
+										<td width="100" align="center"><a href="sales.html" style="text-decoration: none;">Sales</a></td>
+										<td width="100" align="center"><a href="contact.html" style="text-decoration: none;">Contact</a></td>
+										
+										<!-- Space -->
+										<td width="100" colspan="6"><p>&nbsp;</p></td>
+										
+									
+										<!-- Login Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/login.png" alt="Login Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openLoginModal()">
+										</td>
+
+										<!-- Shopping Icon -->
+										<td width="50" height="50" align="center">
+											<img src="image/shopping.png" alt="Shopping Icon" style="width: 25px; height: auto; cursor: pointer;" onclick="openCartModal()">
+										</td>
+										<td width="10" height="50" align="center">
+										<tr>
+											<td colspan="6"><p>&nbsp;</p></td>
+										</tr>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p>&nbsp;</p></td> <!--non-breaking space-->
+				</tr>
+			</table>
+			<!-- Separator End -->
+	
+
+		
+		<main>
+		<!-- Main Table Container -->
+		<table bgcolor="#e0cfc4" border="0" width="900" style="border-collapse: collapse; margin: 20px auto;">
+			<tr>
+			<td>
+				<div class="slideshow-container">
+					<!-- Slide 1 with Overlay -->
+					<div class="mySlides fade">
+						<img src="image/sales-slide.png" style="width:100%">
+						<div class="overlay">
+							<p>Apply as Membership and Get 50% Discount!</p>
+							<button onclick="showLoginModal()">Apply Now</button>
+						</div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="mySlides fade">
+						<img src="image/sales-slide2.png" style="width:100%">
+					</div>
+
+					<!-- Slide 3 -->
+					<div class="mySlides fade">
+						<img src="image/sales-slide3.png" style="width:100%">
+					</div>
+
+				</div>
+			</td>
+			</tr>
+		</table>
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+
+				<table class="box" border="0" align="center" bgcolor="#f0ecf5" width="900" style="padding-left: 10px; padding-right: 10px; margin: 20px auto;"> 
+					<tr> 
+						<td colspan="6" align="center"> 
+							<marquee width="900" scrollamount="8" style="font-family: 'arial';color: #6b5b73;">
+								50% OFF------------------SHOPPING WITH US!------------------DONT FORGET APPLY AS MEMBERSHIP!
+							</marquee>
+						</td>
+					</tr> 
+			</table>
+			
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+			
+			<!-- Best Seller Section -->
+			<table border="0" align="center" width="900" style="border-collapse: collapse; background-image: url('image/countdown-bg.png');">
+				<tr>
+					<td colspan="6" align="center" width="900" height="500" style="padding: 20px; text-align: center;">
+						<div class="countdown-container">
+							<h1>Seasonal Big Sale</h1>
+							<p>Up to 50% OFF</p>
+							<div class="timer">
+								<div class="time-box">
+									<span id="days">00</span>
+									<p><i class="fa fa-clock"></i> Days</p>
+								</div>
+								<div class="time-box">
+									<span id="hours">00</span>
+									<p>Hours</p>
+								</div>
+								<div class="time-box">
+									<span id="minutes">00</span>
+									<p>Minutes</p>
+								</div>
+								<div class="time-box">
+									<span id="seconds">00</span>
+									<p>Seconds</p>
+								</div>
+							</div>
+							<a href="shop.html" style="text-decoration: white;">
+								<button>Shop Now</button>
+							</a>
+						</div>
+					</td>
+				</tr>
+		</table>
+		
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+			
+		<table border="0" align="center" width="900" style="border-collapse: collapse; margin: 20px auto;">
+						<!-- Row for Navigation Links -->
+						<tr height="50" style="background-color: #3a3434;">
+							<td colspan="2" align="center" width="250"></td>
+							<td align="center" width="200">
+								<a href="#new-collection">New Collection</a>
+							</td>
+							<td align="center" width="200">
+								<a href="#gallery">Gallery</a>
+							</td>
+							<td align="center" width="250"></td>
+						</tr>
+			</table>
+			
+			<!-- Separator -->
+			<table>
+				<tr>
+					<td><p style="margin: 0.5px;"></p></td>
+				</tr>
+			</table>
+			<!-- Separator End -->
+			
+			<!-- Youtube new collection Section -->
+			<table border="0" align="center" width="900" style="border-collapse: collapse; margin: 20px auto; background-color: #f0ecf5;">
+				   <tr>
+					<td colspan="6" align="center" style="padding: 40px;">
+						<section id="new-collection">
+					  <!-- Title Section -->
+					  <h2 style="font-size: 3em; color: #5d5d5d; font-weight: bold; letter-spacing: 1px; margin: 0; text-align: center;">
+						Our New Collection
+					  </h2>
+					</td>
+				  </tr>
+				  <tr>
+					  <td colspan="4" align="center" style="padding: 20px;">
+						<!-- Video Embed -->
+						<iframe 
+						  width="500" 
+						  height="315" 
+						  src="https://www.youtube.com/embed/5i0vYvWcaGo?si=QNv5djY4cs2R25_w" 
+						  title="YouTube video player" 
+						  frameborder="0" 
+						  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						  referrerpolicy="strict-origin-when-cross-origin" 
+						  allowfullscreen>
+						</iframe>
+						<abbr title="Streets commercial video">
+						  <a href="https://youtu.be/5i0vYvWcaGo?si=FPe9eCCAnVpamuVO" target="_blank" style="text-decoration: none; color: inherit;">
+							STREETS
+						  </a>
+						</abbr>
+					  </td>
+					  <td colspan="2" align="center" style="padding: 20px;">
+						<!-- Image Content -->
+						<img src="image/comment-youtube.png" alt="New Collection" style="width: 300px; border-radius: 8px;">
+					  </td>
+					</tr>
+
+ 
+
+				<tr>
+				  <td colspan="6" align="center" width="900" height="600" style="padding: 40px; background-color: #f0ecf5;">
+					<section id="gallery" style="max-width: 800px; margin: 0 auto; text-align: center;">
+					  <!-- Title Section -->
+					  <h2 style="font-size: 3em; color: #5d5d5d; font-weight: bold; letter-spacing: 1px; padding-bottom: 10px;">
+						  Gallery
+						</h2>
+						<div class="gallery">
+
+							<img class="four-grid-cells"
+								src="image/product4.jpg"/>
+
+							<img
+								src="image/product7.jpg"/>
+
+							<img class="wide-image"
+								src="image/product16.jpg"/>
+
+							<img
+								src="image/product17.jpg"/>
+
+							<img
+								src="image/product21.jpg"/>
+
+							<img class="wide-image"
+								src="image/shop-slide.png"/>
+
+							<img
+								src="image/image1.jpg"/>
+								
+							<img class="wide-image"
+								src="image/image4.png"/>
+								
+							<img
+								src="image/image2.jpg"/>
+								
+							<img
+								src="image/image3.jpg"/>
+
+						</div>
+
+						<p style="text-align: center; margin-top: 20px;">
+							<a href="#top" style="text-decoration: none; background-color: #4d4845; color: #fff; padding: 10px 30px; border-radius: 20px;" > Go Back Up </a>
+						</p>
+				  </td>
+				</tr>
+					<!---Footer----->	
+					<tr align="center">
+						<td colspan="6">
+							<table bgcolor="#3a3434" border="0" width="900">
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+								<tr align="center">
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Useful Links</b><br />
+										<a href="index.html">Home</a><br />
+										<a href="about.html">About us</a><br />
+										<a href="shop.html">Our Product</a><br />
+										<a href="sales.html">Sales</a><br />
+										<a href="contact.html">Contact Us</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Service</b><br />
+										<a href="#">Order Guide</a><br />
+										<a href="#">Right of Withdrawal</a><br />
+										<a href="#">Shipping & Payment</a><br />
+										<a href="#">Return Policy</a><br />
+										<a href="#">Term & Conditions</a>
+									</td>
+									<td colspan="2" width="300">
+										<b style="color: #fcb69f;">Contact Us</b><br />
+										<span style="color: #ffffff;">019-836-7334<br />
+										<span style="color: #ffffff;">B-02, 03, Persiaran Multimedia,<br />
+										<span style="color: #ffffff;">Cyber 10,<br />
+										<span style="color: #ffffff;">63000 Cyberjaya,<br />
+										Selangor
+									</td>
+								</tr>
+								<tr>
+									<td colspan="6" align="center">
+									<p>&nbsp;</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+				<!-- Separator -->
+				<table>
+					<tr>
+						<td><p>&nbsp;</p></td> <!--non-breaking space-->
+					</tr>
+				</table>
+		
+
+	 <script>
+        // Countdown Timer Script
+        function startCountdown() {
+            const endDate = new Date("2025-03-31T00:00:00").getTime(); // Set your countdown end date
+            const updateCountdown = () => {
+                const now = new Date().getTime();
+                const timeLeft = endDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+                document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    document.querySelector(".countdown-container").innerHTML = "<h1>Sale Ended</h1>";
+                }
+            };
+
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+
+        startCountdown();
+    </script>
+	<script>
+	// Slideshow functionality
+		let slideIndex = 0;
+
+		function showSlides() {
+			let slides = document.getElementsByClassName("mySlides");
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			slides[slideIndex-1].style.display = "block";  
+			setTimeout(showSlides, 15000); // Change image every 15 seconds
+		}
+
+		showSlides();
+
+		</script>
+
+	</body>
+</html>
